@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { DashboardLayout } from './components/DashboardLayout';
 import withTheme from './withTheme';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 export const App = withTheme(class extends Component {
 
@@ -11,13 +11,13 @@ export const App = withTheme(class extends Component {
       <Router>
         <DashboardLayout>
           <Switch>
-            <Route path="/react-web-utilities" component={() => <div>Dashboard</div>} />
-            <Route path="/react-web-utilities/overview" component={() => <div>Overview</div>} />
-            <Route path="/react-web-utilities/cards" component={() => <div>Cards</div>} />
-            <Route path="/react-web-utilities/layout" component={() => <div>Layout</div>} />
-            <Route path="/react-web-utilities/form" component={() => <div>Form</div>} />
-            <Route path="/react-web-utilities/table" component={() => <div>Table</div>} />
-            <Route path="/react-web-utilities/chart" component={() => <div>Chart</div>} />
+            <Route path="/overview" component={() => <div>Overview</div>} />
+            <Route path="/cards" component={() => <div>Cards</div>} />
+            <Route path="/layout" component={() => <div>Layout</div>} />
+            <Route path="/form" component={() => <div>Form</div>} />
+            <Route path="/table" component={() => <div>Table</div>} />
+            <Route path="/chart" component={() => <div>Chart</div>} />
+            <Redirect to="/react-web-utilities" />
           </Switch>
         </DashboardLayout>
 

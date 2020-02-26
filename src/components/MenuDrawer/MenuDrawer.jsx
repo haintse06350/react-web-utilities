@@ -63,9 +63,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Dashboard</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/overview"
+                to="/overview"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/react-web-utilities/overview'
+                  active: location.pathname === '/overview'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -74,8 +74,8 @@ export const MenuDrawer = withRouter((
                 <Typography>UI Overview</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/cards"
-                className={classnames(classes.listItem, { active: location.pathname === '/react-web-utilities/cards' })}
+                to="/cards"
+                className={classnames(classes.listItem, { active: location.pathname === '/cards' })}
               >
                 <div className={classes.listItemIcon}>
                   <img src={IconCards} height={20} alt="icon" />
@@ -83,9 +83,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Cards</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/layout"
+                to="/layout"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/react-web-utilities/layout'
+                  active: location.pathname === '/layout'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -94,9 +94,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Layouts</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/form"
+                to="/form"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/react-web-utilities/form'
+                  active: location.pathname === '/form'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -105,9 +105,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Form</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/table"
+                to="/table"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/react-web-utilities/table'
+                  active: location.pathname === '/table'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -116,9 +116,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Tables</Typography>
               </Link>
               <Link
-                to="/react-web-utilities/chart"
+                to="/chart"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/react-web-utilities/chart'
+                  active: location.pathname === '/chart'
                 })}
               >
                 <div className={classes.listItemIcon}>
