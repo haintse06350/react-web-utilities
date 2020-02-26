@@ -5,13 +5,14 @@ import { Logout } from 'mdi-material-ui';
 import { withStyles, Drawer, Typography, IconButton } from '@material-ui/core';
 import { styles } from './MenuDrawer.style';
 import classnames from 'classnames';
-import IconDashboard from './assets/dashboard.svg';
-import IconOrder from './assets/Ic_orders.svg';
-import IconEmployees from './assets/Ic_employee.svg';
-import IconClients from './assets/Ic_client.svg';
-import IconDiamond from './svg/041-value.svg';
-import IconTrophy from './svg/042-trophy.svg';
-import IconExcellence from './svg/036-Excellence.svg';
+import IconDashboard from './assets/ui-icon-svg/328-presentation.svg';
+import IconOverview from './assets/ui-icon-svg/324-browser.svg';
+import IconCards from './assets/ui-icon-svg/232-credit-card.svg';
+import IconForm from './assets/ui-icon-svg/108-browser-16.svg';
+import IconTable from './assets/ui-icon-svg/020-browser-21.svg';
+import IconLayout from './assets/ui-icon-svg/112-browser-15.svg';
+import IconChart from './assets/ui-icon-svg/300-vector-2.svg';
+import IconSetting from './assets/ui-icon-svg/268-settings.svg';
 import { Link, withRouter } from 'react-router-dom';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
@@ -60,38 +61,27 @@ export const MenuDrawer = withRouter((
                 <div className={classes.listItemIcon}>
                   <img src={IconDashboard} height={20} alt="icon" />
                 </div>
-                <Typography>Home</Typography>
+                <Typography>Dashboard</Typography>
               </Link>
               <Link
-                to="/players"
+                to="/overview"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/players'
+                  active: location.pathname === '/overview'
                 })}
               >
                 <div className={classes.listItemIcon}>
-                  <img src={IconOrder} height={20} alt="icon" />
+                  <img src={IconOverview} height={20} alt="icon" />
                 </div>
-                <Typography>Players</Typography>
+                <Typography>UI Overview</Typography>
               </Link>
               <Link
-                to="/teams"
+                to="/cards"
                 className={classnames(classes.listItem, { active: location.pathname === '/teams' })}
               >
                 <div className={classes.listItemIcon}>
-                  <img src={IconEmployees} height={20} alt="icon" />
+                  <img src={IconCards} height={20} alt="icon" />
                 </div>
-                <Typography>Teams</Typography>
-              </Link>
-              <Link
-                to="/tournaments"
-                className={classnames(classes.listItem, {
-                  active: location.pathname === '/tournaments'
-                })}
-              >
-                <div className={classes.listItemIcon}>
-                  <img src={IconClients} height={20} alt="icon" />
-                </div>
-                <Typography>Tournaments</Typography>
+                <Typography>Cards</Typography>
               </Link>
               <Link
                 to="/layout"
@@ -100,9 +90,20 @@ export const MenuDrawer = withRouter((
                 })}
               >
                 <div className={classes.listItemIcon}>
-                  <img src={IconDiamond} height={20} alt="icon" />
+                  <img src={IconLayout} height={20} alt="icon" />
                 </div>
-                <Typography>Layout</Typography>
+                <Typography>Layouts</Typography>
+              </Link>
+              <Link
+                to="/form"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/form'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconForm} height={20} alt="icon" />
+                </div>
+                <Typography>Form</Typography>
               </Link>
               <Link
                 to="/table"
@@ -111,29 +112,29 @@ export const MenuDrawer = withRouter((
                 })}
               >
                 <div className={classes.listItemIcon}>
-                  <img src={IconTrophy} height={20} alt="icon" />
+                  <img src={IconTable} height={20} alt="icon" />
                 </div>
                 <Typography>Tables</Typography>
               </Link>
               <Link
-                to="/excellence"
+                to="/chart"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/excellence'
+                  active: location.pathname === '/chart'
                 })}
               >
                 <div className={classes.listItemIcon}>
-                  <img src={IconExcellence} height={20} alt="icon" />
+                  <img src={IconChart} height={20} alt="icon" />
                 </div>
-                <Typography>Excellence</Typography>
+                <Typography>Charts</Typography>
               </Link>
             </div>
             <div className={classes.grow} />
             <div>
               <div className={classes.listItem} onClick={this.onLogout}>
                 <div className={classes.listItemIcon}>
-                  <Logout />
+                  <img src={IconSetting} height={20} alt="icon" />
                 </div>
-                <Typography>Logout</Typography>
+                <Typography>Settings</Typography>
               </div>
             </div>
           </Drawer>

@@ -53,7 +53,7 @@ export const DashboardLayout = (
                 >
                   <MenuIcon />
                 </IconButton>
-                <Typography noWrap>Dashboard</Typography>
+                <Typography noWrap>Ultimate UI Components</Typography>
                 <div className={classes.grow} />
               </Toolbar>
             </AppBar>
