@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Classes } from 'react-jss';
 import PropTypes from 'prop-types';
-import { Logout } from 'mdi-material-ui';
 import { withStyles, Drawer, Typography, IconButton } from '@material-ui/core';
 import { styles } from './MenuDrawer.style';
 import classnames from 'classnames';
@@ -55,8 +54,8 @@ export const MenuDrawer = withRouter((
             </div>
             <div className={classes.innerDrawer}>
               <Link
-                to="/"
-                className={classnames(classes.listItem, { active: location.pathname === '/' })}
+                to="/react-web-utilities"
+                className={classnames(classes.listItem, { active: location.pathname === '/react-web-utilities' })}
               >
                 <div className={classes.listItemIcon}>
                   <img src={IconDashboard} height={20} alt="icon" />
@@ -64,9 +63,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Dashboard</Typography>
               </Link>
               <Link
-                to="/overview"
+                to="/react-web-utilities/overview"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/overview'
+                  active: location.pathname === '/react-web-utilities/overview'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -75,8 +74,8 @@ export const MenuDrawer = withRouter((
                 <Typography>UI Overview</Typography>
               </Link>
               <Link
-                to="/cards"
-                className={classnames(classes.listItem, { active: location.pathname === '/teams' })}
+                to="/react-web-utilities/cards"
+                className={classnames(classes.listItem, { active: location.pathname === '/react-web-utilities/cards' })}
               >
                 <div className={classes.listItemIcon}>
                   <img src={IconCards} height={20} alt="icon" />
@@ -84,9 +83,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Cards</Typography>
               </Link>
               <Link
-                to="/layout"
+                to="/react-web-utilities/layout"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/layout'
+                  active: location.pathname === '/react-web-utilities/layout'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -95,9 +94,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Layouts</Typography>
               </Link>
               <Link
-                to="/form"
+                to="/react-web-utilities/form"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/form'
+                  active: location.pathname === '/react-web-utilities/form'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -106,9 +105,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Form</Typography>
               </Link>
               <Link
-                to="/table"
+                to="/react-web-utilities/table"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/table'
+                  active: location.pathname === '/react-web-utilities/table'
                 })}
               >
                 <div className={classes.listItemIcon}>
@@ -117,9 +116,9 @@ export const MenuDrawer = withRouter((
                 <Typography>Tables</Typography>
               </Link>
               <Link
-                to="/chart"
+                to="/react-web-utilities/chart"
                 className={classnames(classes.listItem, {
-                  active: location.pathname === '/chart'
+                  active: location.pathname === '/react-web-utilities/chart'
                 })}
               >
                 <div className={classes.listItemIcon}>
