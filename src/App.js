@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DashboardLayout } from './components/DashboardLayout';
+import { LineChartPage } from './pages/LineChart';
 import withTheme from './withTheme';
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
@@ -16,7 +17,7 @@ export const App = withTheme(class extends Component {
             <Route path="/layout" component={() => <div>Layout</div>} />
             <Route path="/form" component={() => <div>Form</div>} />
             <Route path="/table" component={() => <div>Table</div>} />
-            <Route path="/chart" component={() => <div>Chart</div>} />
+            <Route path="/chart" component={LineChartPage} />
             <Redirect to="/react-web-utilities" />
           </Switch>
         </DashboardLayout>
