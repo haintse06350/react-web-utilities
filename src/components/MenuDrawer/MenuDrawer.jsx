@@ -19,128 +19,128 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 // https://www.flaticon.com/packs/web-design-ui/3
 
 export const MenuDrawer = withRouter(
-	withStyles(styles)(
-		class extends Component {
-			static propTypes = {
-				classes: PropTypes.shape(Classes).isRequired,
-				location: PropTypes.object.isRequired
-			};
+  withStyles(styles)(
+    class extends Component {
+      static propTypes = {
+        classes: PropTypes.shape(Classes).isRequired,
+        location: PropTypes.object.isRequired
+      };
 
-			constructor(props) {
-				super(props);
+      constructor(props) {
+        super(props);
 
-				this.state = {
-					open: false
-				};
-			}
+        this.state = {
+          open: false
+        };
+      }
 
-			render() {
-				const { classes, location, open } = this.props;
+      render() {
+        const { classes, location, open } = this.props;
 
-				return (
-					<Drawer
-						className={classes.drawer}
-						variant="persistent"
-						anchor="left"
-						open={open}
-						classes={{
-							paper: classes.drawerPaper
-						}}
-					>
-						<div className={classes.drawerHeader}>
-							<IconButton onClick={this.props.onDrawerClose}>
-								<ChevronLeftIcon className={classes.chevronIcon} />
-							</IconButton>
-						</div>
-						<div className={classes.innerDrawer}>
-							<Link
-								to="/react-web-utilities"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/react-web-utilities'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconDashboard} height={30} alt="icon" />
-								</div>
-								<Typography>Dashboard</Typography>
-							</Link>
-							<Link
-								to="/overview"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/overview'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconOverview} height={30} alt="icon" />
-								</div>
-								<Typography>UI Overview</Typography>
-							</Link>
-							<Link
-								to="/cards"
-								className={classnames(classes.listItem, { active: location.pathname === '/cards' })}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconCards} height={30} alt="icon" />
-								</div>
-								<Typography>Cards</Typography>
-							</Link>
-							<Link
-								to="/layout"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/layout'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconLayout} height={30} alt="icon" />
-								</div>
-								<Typography>Layouts</Typography>
-							</Link>
-							<Link
-								to="/form"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/form'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconForm} height={30} alt="icon" />
-								</div>
-								<Typography>Form</Typography>
-							</Link>
-							<Link
-								to="/table"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/table'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconTable} height={30} alt="icon" />
-								</div>
-								<Typography>Tables</Typography>
-							</Link>
-							<Link
-								to="/chart"
-								className={classnames(classes.listItem, {
-									active: location.pathname === '/chart'
-								})}
-							>
-								<div className={classes.listItemIcon}>
-									<img src={IconChart} height={30} alt="icon" />
-								</div>
-								<Typography>Charts</Typography>
-							</Link>
-						</div>
-						<div className={classes.grow} />
-						<div>
-							<div className={classes.listItem} onClick={this.onLogout}>
-								<div className={classes.listItemIcon}>
-									<img src={IconSetting} height={30} alt="icon" />
-								</div>
-								<Typography>Settings</Typography>
-							</div>
-						</div>
-					</Drawer>
-				);
-			}
-		}
-	)
+        return (
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor="left"
+            open={open}
+            classes={{
+              paper: classes.drawerPaper
+            }}
+          >
+            <div className={classes.drawerHeader}>
+              <IconButton onClick={this.props.onDrawerClose}>
+                <ChevronLeftIcon className={classes.chevronIcon} />
+              </IconButton>
+            </div>
+            <div className={classes.innerDrawer}>
+              <Link
+                to="/react-web-utilities"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/react-web-utilities'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconDashboard} height={30} alt="icon" />
+                </div>
+                <Typography>Dashboard</Typography>
+              </Link>
+              <Link
+                to="/overview"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/overview'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconOverview} height={30} alt="icon" />
+                </div>
+                <Typography>UI Overview</Typography>
+              </Link>
+              <Link
+                to="/cards"
+                className={classnames(classes.listItem, { active: location.pathname === '/cards' })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconCards} height={30} alt="icon" />
+                </div>
+                <Typography>Cards</Typography>
+              </Link>
+              <Link
+                to="/layout"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/layout'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconLayout} height={30} alt="icon" />
+                </div>
+                <Typography>Layouts</Typography>
+              </Link>
+              <Link
+                to="/form"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/form'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconForm} height={30} alt="icon" />
+                </div>
+                <Typography>Form</Typography>
+              </Link>
+              <Link
+                to="/table"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/table'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconTable} height={30} alt="icon" />
+                </div>
+                <Typography>Tables</Typography>
+              </Link>
+              <Link
+                to="/chart"
+                className={classnames(classes.listItem, {
+                  active: location.pathname === '/chart'
+                })}
+              >
+                <div className={classes.listItemIcon}>
+                  <img src={IconChart} height={30} alt="icon" />
+                </div>
+                <Typography>Charts</Typography>
+              </Link>
+            </div>
+            <div className={classes.grow} />
+            <div>
+              <div className={classes.listItem} onClick={this.onLogout}>
+                <div className={classes.listItemIcon}>
+                  <img src={IconSetting} height={30} alt="icon" />
+                </div>
+                <Typography>Settings</Typography>
+              </div>
+            </div>
+          </Drawer>
+        );
+      }
+    }
+  )
 );
